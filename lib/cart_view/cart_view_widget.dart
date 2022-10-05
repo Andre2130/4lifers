@@ -22,6 +22,16 @@ class _CartViewWidgetState extends State<CartViewWidget> {
       appBar: AppBar(
         backgroundColor: FlutterFlowTheme.of(context).primaryColor,
         automaticallyImplyLeading: false,
+        leading: InkWell(
+          onTap: () async {
+            context.pop();
+          },
+          child: Icon(
+            Icons.chevron_left,
+            color: FlutterFlowTheme.of(context).primaryBtnText,
+            size: 24,
+          ),
+        ),
         title: Text(
           'Page Title',
           style: FlutterFlowTheme.of(context).title2.override(
@@ -69,6 +79,7 @@ class _CartViewWidgetState extends State<CartViewWidget> {
                           final rowProductsRecord = snapshot.data!;
                           return Row(
                             mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Image.network(
                                 rowProductsRecord.image!,
@@ -83,6 +94,10 @@ class _CartViewWidgetState extends State<CartViewWidget> {
                                   rowProductsRecord.name!,
                                   style: FlutterFlowTheme.of(context).bodyText1,
                                 ),
+                              ),
+                              Text(
+                                rowProductsRecord.price!.toString(),
+                                style: FlutterFlowTheme.of(context).bodyText1,
                               ),
                             ],
                           );

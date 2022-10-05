@@ -19,16 +19,37 @@ class _HomePageWidgetState extends State<HomePageWidget> {
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+      appBar: AppBar(
+        backgroundColor: FlutterFlowTheme.of(context).primaryColor,
+        automaticallyImplyLeading: true,
+        title: Text(
+          'Shop',
+          style: FlutterFlowTheme.of(context).bodyText1,
+        ),
+        actions: [
+          Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 15, 0),
+            child: InkWell(
+              onTap: () async {
+                context.pushNamed('CartView');
+              },
+              child: Icon(
+                Icons.shopping_bag_outlined,
+                color: FlutterFlowTheme.of(context).primaryBtnText,
+                size: 24,
+              ),
+            ),
+          ),
+        ],
+        centerTitle: true,
+        elevation: 4,
+      ),
       body: SafeArea(
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
-              Text(
-                'Shop',
-                style: FlutterFlowTheme.of(context).bodyText1,
-              ),
               Column(
                 mainAxisSize: MainAxisSize.max,
                 children: [

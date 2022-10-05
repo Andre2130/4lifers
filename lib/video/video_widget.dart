@@ -3,7 +3,6 @@ import '../backend/backend.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_youtube_player.dart';
-import '../flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -109,7 +108,7 @@ class _VideoWidgetState extends State<VideoWidget> {
                         final youtubePlayerYouTubeVideoResponse =
                             snapshot.data!;
                         return FlutterFlowYoutubePlayer(
-                          url: functions.youTubeString(FFAppState().videoID),
+                          url: 'https://www.youtube.com/watch?v=V7PLjecNFxQ',
                           autoPlay: false,
                           looping: true,
                           mute: false,
