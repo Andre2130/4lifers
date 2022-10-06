@@ -38,11 +38,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, _) => NavBarPage(),
           routes: [
             FFRoute(
-              name: 'HomePage',
-              path: 'homePage',
+              name: 'Shop',
+              path: 'shop',
               builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'HomePage')
-                  : HomePageWidget(),
+                  ? NavBarPage(initialPage: 'Shop')
+                  : ShopWidget(),
             ),
             FFRoute(
               name: 'ProductList',
@@ -89,6 +89,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                 id: params.getParam('id', ParamType.String),
                 title: params.getParam('title', ParamType.String),
               ),
+            ),
+            FFRoute(
+              name: 'live',
+              path: 'live',
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'live')
+                  : LiveWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ).toRoute(appStateNotifier),

@@ -13,3 +13,9 @@ String youTubeString(String? id) {
   String url = 'https://www.youtube.com/watch?v=$id';
   return url;
 }
+
+double negative(double price) {
+  // Add your function code here!
+  double res = price * -1;
+  return res;
+}

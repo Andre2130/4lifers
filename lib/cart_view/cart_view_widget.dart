@@ -1,6 +1,9 @@
 import '../backend/backend.dart';
+import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../flutter_flow/flutter_flow_widgets.dart';
+import '../flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -95,9 +98,26 @@ class _CartViewWidgetState extends State<CartViewWidget> {
                                   style: FlutterFlowTheme.of(context).bodyText1,
                                 ),
                               ),
-                              Text(
-                                rowProductsRecord.price!.toString(),
-                                style: FlutterFlowTheme.of(context).bodyText1,
+                              FlutterFlowIconButton(
+                                borderColor: Colors.transparent,
+                                borderRadius: 30,
+                                borderWidth: 1,
+                                buttonSize: 60,
+                                icon: Icon(
+                                  Icons.cancel_outlined,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  size: 30,
+                                ),
+                                onPressed: () async {
+                                  setState(() => FFAppState()
+                                      .Cart
+                                      .remove(rowProductsRecord.reference));
+                                  setState(() => FFAppState().total =
+                                      FFAppState().total +
+                                          functions.negative(
+                                              rowProductsRecord.price!));
+                                },
                               ),
                             ],
                           );
@@ -106,6 +126,28 @@ class _CartViewWidgetState extends State<CartViewWidget> {
                     },
                   );
                 },
+              ),
+              FFButtonWidget(
+                onPressed: () async {
+                  context.pushNamed('CheckoutView');
+
+                  setState(() => FFAppState().total = 0);
+                },
+                text: 'CHECKOUT',
+                options: FFButtonOptions(
+                  width: 130,
+                  height: 40,
+                  color: FlutterFlowTheme.of(context).primaryColor,
+                  textStyle: FlutterFlowTheme.of(context).subtitle2.override(
+                        fontFamily: 'Poppins',
+                        color: Colors.white,
+                      ),
+                  borderSide: BorderSide(
+                    color: Colors.transparent,
+                    width: 1,
+                  ),
+                  borderRadius: BorderRadius.circular(8),
+                ),
               ),
             ],
           ),

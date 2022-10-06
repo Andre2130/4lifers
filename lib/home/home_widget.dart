@@ -18,9 +18,9 @@ class _HomeWidgetState extends State<HomeWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).black600,
+      backgroundColor: FlutterFlowTheme.of(context).primaryBtnText,
       appBar: AppBar(
-        backgroundColor: FlutterFlowTheme.of(context).black600,
+        backgroundColor: FlutterFlowTheme.of(context).primaryBtnText,
         automaticallyImplyLeading: false,
         leading: Icon(
           Icons.menu,

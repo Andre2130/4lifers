@@ -187,6 +187,10 @@ class _ProductListWidgetState extends State<ProductListWidget> {
                                                 .Cart
                                                 .add(staggeredViewProductsRecord
                                                     .reference));
+                                            setState(() => FFAppState().total =
+                                                FFAppState().total +
+                                                    staggeredViewProductsRecord
+                                                        .price!);
                                           },
                                         ),
                                       ),

@@ -25,6 +25,8 @@ class FFAppState {
   String key = 'AIzaSyCdIDvungzwp2d9AMivD62EBB0qyw-Agdk';
 
   String videoID = '';
+
+  double total = 0;
 }
 
 LatLng? _latLngFromString(String? val) {

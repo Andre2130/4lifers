@@ -97,7 +97,8 @@ class _NavBarPageState extends State<NavBarPage> {
   Widget build(BuildContext context) {
     final tabs = {
       'Home': HomeWidget(),
-      'HomePage': HomePageWidget(),
+      'live': LiveWidget(),
+      'Shop': ShopWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
     return Scaffold(
@@ -121,6 +122,14 @@ class _NavBarPageState extends State<NavBarPage> {
               size: 24,
             ),
             label: 'Home',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.flash_on,
+              size: 24,
+            ),
+            label: 'Live',
             tooltip: '',
           ),
           BottomNavigationBarItem(
