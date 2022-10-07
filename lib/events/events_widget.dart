@@ -100,7 +100,7 @@ class _EventsWidgetState extends State<EventsWidget>
                                       decoration: InputDecoration(
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .bodyText2,
-                                        hintText: 'City, zipcode',
+                                        hintText: 'City or Zipcode',
                                         enabledBorder: OutlineInputBorder(
                                           borderSide: BorderSide(
                                             color: Color(0x00000000),
@@ -145,6 +145,7 @@ class _EventsWidgetState extends State<EventsWidget>
                                       ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyText1,
+                                      textAlign: TextAlign.center,
                                     ),
                                   ),
                                   FlutterFlowIconButton(
@@ -221,7 +222,7 @@ class _EventsWidgetState extends State<EventsWidget>
                                               EdgeInsetsDirectional.fromSTEB(
                                                   16, 4, 16, 0),
                                           child: Text(
-                                            '30 locations world wide',
+                                            '30 events world wide',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyText2,
                                           ),
@@ -342,23 +343,6 @@ class _EventsWidgetState extends State<EventsWidget>
                                                                         mainAxisSize:
                                                                             MainAxisSize.max,
                                                                         children: [
-                                                                          RatingBarIndicator(
-                                                                            itemBuilder: (context, index) =>
-                                                                                Icon(
-                                                                              Icons.radio_button_checked_rounded,
-                                                                              color: FlutterFlowTheme.of(context).primaryText,
-                                                                            ),
-                                                                            direction:
-                                                                                Axis.horizontal,
-                                                                            rating:
-                                                                                4,
-                                                                            unratedColor:
-                                                                                FlutterFlowTheme.of(context).secondaryText,
-                                                                            itemCount:
-                                                                                5,
-                                                                            itemSize:
-                                                                                16,
-                                                                          ),
                                                                           Padding(
                                                                             padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 8,
@@ -367,7 +351,7 @@ class _EventsWidgetState extends State<EventsWidget>
                                                                                 0),
                                                                             child:
                                                                                 Text(
-                                                                              '4.7',
+                                                                              'Atlanta, GA',
                                                                               style: FlutterFlowTheme.of(context).bodyText2,
                                                                             ),
                                                                           ),
@@ -518,23 +502,6 @@ class _EventsWidgetState extends State<EventsWidget>
                                                                         mainAxisSize:
                                                                             MainAxisSize.max,
                                                                         children: [
-                                                                          RatingBarIndicator(
-                                                                            itemBuilder: (context, index) =>
-                                                                                Icon(
-                                                                              Icons.radio_button_checked_rounded,
-                                                                              color: FlutterFlowTheme.of(context).primaryText,
-                                                                            ),
-                                                                            direction:
-                                                                                Axis.horizontal,
-                                                                            rating:
-                                                                                4,
-                                                                            unratedColor:
-                                                                                FlutterFlowTheme.of(context).secondaryText,
-                                                                            itemCount:
-                                                                                5,
-                                                                            itemSize:
-                                                                                16,
-                                                                          ),
                                                                           Padding(
                                                                             padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 8,
@@ -543,7 +510,7 @@ class _EventsWidgetState extends State<EventsWidget>
                                                                                 0),
                                                                             child:
                                                                                 Text(
-                                                                              '4.7',
+                                                                              'Virtual Event',
                                                                               style: FlutterFlowTheme.of(context).bodyText2,
                                                                             ),
                                                                           ),
@@ -615,7 +582,7 @@ class _EventsWidgetState extends State<EventsWidget>
                                               EdgeInsetsDirectional.fromSTEB(
                                                   16, 4, 16, 0),
                                           child: Text(
-                                            '10 spots to catch some zzz\'s',
+                                            'Watch recaps from past events',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyText2,
                                           ),
@@ -714,7 +681,7 @@ class _EventsWidgetState extends State<EventsWidget>
                                                                         .start,
                                                                 children: [
                                                                   Text(
-                                                                    'Firenze - Giardino Bardini',
+                                                                    'ASM Live Event',
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .subtitle1,
@@ -881,7 +848,7 @@ class _EventsWidgetState extends State<EventsWidget>
                                                                       .start,
                                                               children: [
                                                                 Text(
-                                                                  'Cinque Terre',
+                                                                  'Love & Respect',
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .subtitle1,
