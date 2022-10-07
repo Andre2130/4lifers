@@ -7,3 +7,5 @@ export 'product_details/product_details_widget.dart' show ProductDetailsWidget;
 export 'home/home_widget.dart' show HomeWidget;
 export 'video/video_widget.dart' show VideoWidget;
 export 'live/live_widget.dart' show LiveWidget;
+export 'events/events_widget.dart' show EventsWidget;
+export 'event_details/event_details_widget.dart' show EventDetailsWidget;
