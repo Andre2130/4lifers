@@ -757,7 +757,7 @@ class _EventsWidgetState extends State<EventsWidget>
                                                                           8,
                                                                           0),
                                                                   child: Text(
-                                                                    '\$220 USD',
+                                                                    'view',
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .bodyText1
@@ -927,7 +927,7 @@ class _EventsWidgetState extends State<EventsWidget>
                                                                             8,
                                                                             0),
                                                                 child: Text(
-                                                                  '\$220 USD',
+                                                                  'view',
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyText1

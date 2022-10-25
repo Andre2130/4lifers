@@ -98,7 +98,7 @@ class _NavBarPageState extends State<NavBarPage> {
     final tabs = {
       'Home': HomeWidget(),
       'live': LiveWidget(),
-      'Shop': ShopWidget(),
+      'webpage': WebpageWidget(),
       'events': EventsWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
@@ -135,10 +135,10 @@ class _NavBarPageState extends State<NavBarPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.shopping_cart,
+              Icons.shopping_cart_outlined,
               size: 24,
             ),
-            label: 'Shop',
+            label: 'Home',
             tooltip: '',
           ),
           BottomNavigationBarItem(

@@ -87,9 +87,14 @@ class _HomeWidgetState extends State<HomeWidget> {
                   children: [
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(16, 4, 16, 0),
-                      child: Text(
-                        'See All',
-                        style: FlutterFlowTheme.of(context).bodyText1,
+                      child: InkWell(
+                        onTap: () async {
+                          context.pushNamed('webpage');
+                        },
+                        child: Text(
+                          'See All',
+                          style: FlutterFlowTheme.of(context).bodyText1,
+                        ),
                       ),
                     ),
                   ],

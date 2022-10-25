@@ -1,8 +1,8 @@
 import '../backend/backend.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_video_player.dart';
 import '../flutter_flow/flutter_flow_youtube_player.dart';
+import '../flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -91,14 +91,20 @@ class _VideoWidgetState extends State<VideoWidget> {
                         shrinkWrap: true,
                         scrollDirection: Axis.vertical,
                         children: [
-                          FlutterFlowVideoPlayer(
-                            path: 'assets/videos/MOV_3858_(1).mp4',
-                            videoType: VideoType.asset,
+                          FlutterFlowYoutubePlayer(
+                            url: valueOrDefault<String>(
+                              functions.youTubeString(FFAppState().videoID),
+                              'wqjzKOp7XZI',
+                            ),
                             autoPlay: false,
                             looping: true,
+                            mute: false,
                             showControls: true,
-                            allowFullScreen: true,
-                            allowPlaybackSpeedMenu: false,
+                            showFullScreen: true,
+                          ),
+                          Text(
+                            videoVideosRecord!.views!.toString(),
+                            style: FlutterFlowTheme.of(context).bodyText1,
                           ),
                           Padding(
                             padding:
@@ -162,7 +168,7 @@ class _VideoWidgetState extends State<VideoWidget> {
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(0, 4, 0, 0),
                                               child: Text(
-                                                'okay wow, you could definitely catch meat the restaurant in Ibiza',
+                                                'Druski is sooo  funny OMG! #4Lifers',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyText1
@@ -232,22 +238,6 @@ class _VideoWidgetState extends State<VideoWidget> {
                             ),
                           ),
                         ],
-                      ),
-                      Text(
-                        videoVideosRecord!.description!,
-                        style: FlutterFlowTheme.of(context).bodyText1,
-                      ),
-                      Text(
-                        videoVideosRecord!.views!.toString(),
-                        style: FlutterFlowTheme.of(context).bodyText1,
-                      ),
-                      FlutterFlowYoutubePlayer(
-                        url: 'https://www.youtube.com/watch?v=V7PLjecNFxQ',
-                        autoPlay: false,
-                        looping: true,
-                        mute: false,
-                        showControls: true,
-                        showFullScreen: true,
                       ),
                     ],
                   ),

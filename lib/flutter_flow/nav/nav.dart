@@ -38,13 +38,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, _) => NavBarPage(),
           routes: [
             FFRoute(
-              name: 'Shop',
-              path: 'shop',
-              builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'Shop')
-                  : ShopWidget(),
-            ),
-            FFRoute(
               name: 'ProductList',
               path: 'productList',
               builder: (context, params) => ProductListWidget(
@@ -108,6 +101,18 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'EventDetails',
               path: 'eventDetails',
               builder: (context, params) => EventDetailsWidget(),
+            ),
+            FFRoute(
+              name: 'webpage',
+              path: 'webpage',
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'webpage')
+                  : WebpageWidget(),
+            ),
+            FFRoute(
+              name: 'ShopCopy',
+              path: 'shopCopy',
+              builder: (context, params) => ShopCopyWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ).toRoute(appStateNotifier),

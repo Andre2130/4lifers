@@ -4,14 +4,14 @@ import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ShopWidget extends StatefulWidget {
-  const ShopWidget({Key? key}) : super(key: key);
+class ShopCopyWidget extends StatefulWidget {
+  const ShopCopyWidget({Key? key}) : super(key: key);
 
   @override
-  _ShopWidgetState createState() => _ShopWidgetState();
+  _ShopCopyWidgetState createState() => _ShopCopyWidgetState();
 }
 
-class _ShopWidgetState extends State<ShopWidget> {
+class _ShopCopyWidgetState extends State<ShopCopyWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
