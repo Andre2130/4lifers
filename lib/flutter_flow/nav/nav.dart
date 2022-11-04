@@ -125,9 +125,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: 'live',
               path: 'live',
-              builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'live')
-                  : LiveWidget(),
+              builder: (context, params) => LiveWidget(),
             ),
             FFRoute(
               name: 'events',
@@ -156,7 +154,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: 'live_list',
               path: 'liveList',
-              builder: (context, params) => LiveListWidget(),
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'live_list')
+                  : LiveListWidget(),
             ),
             FFRoute(
               name: 'BroadcastPage',

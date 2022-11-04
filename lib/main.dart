@@ -117,7 +117,7 @@ class _NavBarPageState extends State<NavBarPage> {
   Widget build(BuildContext context) {
     final tabs = {
       'Home': HomeWidget(),
-      'live': LiveWidget(),
+      'live_list': LiveListWidget(),
       'webpage': WebpageWidget(),
       'events': EventsWidget(),
     };
@@ -147,10 +147,10 @@ class _NavBarPageState extends State<NavBarPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.flash_on,
+              Icons.bolt,
               size: 24,
             ),
-            label: 'Live',
+            label: 'Home',
             tooltip: '',
           ),
           BottomNavigationBarItem(
