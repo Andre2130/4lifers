@@ -35,7 +35,7 @@ class _WebpageWidgetState extends State<WebpageWidget> {
               FlutterFlowWebView(
                 url: 'https://4lifersworld.com',
                 bypass: true,
-                height: MediaQuery.of(context).size.height * 0.77,
+                height: MediaQuery.of(context).size.height * 0.85,
                 verticalScroll: true,
                 horizontalScroll: false,
               ),
