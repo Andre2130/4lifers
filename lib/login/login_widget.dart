@@ -113,12 +113,17 @@ class _LoginWidgetState extends State<LoginWidget> {
                 Expanded(
                   child: Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
-                    child: Text(
-                      'Access your account by logging in below.',
-                      style: FlutterFlowTheme.of(context).subtitle2.override(
-                            fontFamily: 'Poppins',
-                            color: FlutterFlowTheme.of(context).secondaryText,
-                          ),
+                    child: InkWell(
+                      onTap: () async {
+                        context.pushNamed('Home');
+                      },
+                      child: Text(
+                        'Access your account by logging in below.',
+                        style: FlutterFlowTheme.of(context).subtitle2.override(
+                              fontFamily: 'Poppins',
+                              color: FlutterFlowTheme.of(context).secondaryText,
+                            ),
+                      ),
                     ),
                   ),
                 ),

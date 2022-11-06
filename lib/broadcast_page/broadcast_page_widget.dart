@@ -174,7 +174,7 @@ class _BroadcastPageWidgetState extends State<BroadcastPageWidget> {
                       playbackName: widget.videoName,
                       playbackUrl: muxBroadcastPlaybackUrl,
                       timestamp: getCurrentTimestamp,
-                      uid: currentUserUid,
+                      uid: 'NAyJWB8qgEPsE2nU34F5gkFkFuJ2',
                     );
                     var streamsRecordReference = StreamsRecord.collection.doc();
                     await streamsRecordReference.set(streamsCreateData);
